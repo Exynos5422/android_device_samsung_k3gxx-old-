@@ -264,6 +264,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	SamsungServiceMode \
+	Gello \
 	Torch
 
 ###########################################################
