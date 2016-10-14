@@ -72,18 +72,12 @@ BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 #Enable ValidityService for fingerprint
 BOARD_USES_VALIDITY := true
 
-# HEALTH DAEMON (CHARGER) DEFINES
-TARGET_PROVIDES_LIBLIGHT := false
-RED_LED_PATH := "/sys/devices/virtual/sec/led/led_r"
-GREEN_LED_PATH := "/sys/devices/virtual/sec/led/led_g"
-BLUE_LED_PATH := "/sys/devices/virtual/sec/led/led_b"
-BACKLIGHT_PATH := "/sys/devices/14400000.fimd_fb/backlight/panel/brightness"
-CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/batt_lp_charging"
-
-# Battery
-BOARD_CHARGER_ENABLE_SUSPEND := true
+# Charger/Healthd
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-BOARD_BATTERY_DEVICE_NAME := battery
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 
 # FIMG2D
 BOARD_USES_SKIA_FIMGAPI := true
