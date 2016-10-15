@@ -218,6 +218,7 @@ PRODUCT_PACKAGES += \
 	Snap
 
 PRODUCT_PACKAGES += \
+        camera.universal5422 \
 	libhwjpeg \
 	libsamsung_symbols \
 	libdmitry
