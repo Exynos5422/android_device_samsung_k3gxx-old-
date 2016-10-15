@@ -121,8 +121,8 @@ TARGET_RECOVERY_FSTAB := device/samsung/k3gxx/rootdir/etc/fstab.universal5422
 endif
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/k3gxx/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    device/samsung/k3gxx/sepolicy
 
 # Graphics
 USE_OPENGL_RENDERER := true
