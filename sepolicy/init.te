@@ -1,7 +1,6 @@
-domain_trans(init, rootfs, cpboot-daemon)
-domain_trans(init, cpboot-daemon_exec, cpboot-daemon)
-domain_trans(init, gpsd_exec, gpsd)
-
+# Mount debugfs on /sys/kernel/debug.
+allow init debugfs:dir mounton;
+ 
 # /dev/block/mmcblk0p[0-9]
 allow init emmcblk_device:blk_file rw_file_perms;
 
@@ -11,17 +10,8 @@ allow init tmpfs:lnk_file create_file_perms;
 # /data
 allow init sdcardd_exec:file r_file_perms;
 
-#============= init ==============
-allow init device:fifo_file create;
-allow init input_device:chr_file ioctl;
-allow init servicemanager:binder call;
-allow init servicemanager:binder transfer;
-#allow init shell_exec:file execute_no_trans;
-#allow init system_file:file execute_no_trans;
-allow init tee_device:file { read getattr open execute execute_no_trans };
-allow init default_android_service:service_manager add;
-allow init debugfs:dir mounton;
-
-# LD_SHIM_LIBS
-allow init gpsd:process { noatsecure };
-allow init mediaserver:process { noatsecure };
+# sysfs iio:device[0-9]
+allow init sysfs:lnk_file setattr;
+ 
+# read/chown mDNIE symlinks
+allow init sysfs_mdnie_writable:lnk_file { read setattr };
