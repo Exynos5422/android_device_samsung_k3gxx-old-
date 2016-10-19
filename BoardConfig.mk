@@ -51,7 +51,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000 --tags_offset 0x10000100
 BOARD_MKBOOTIMG_ARGS += --dt_dir $(OUT)/obj/KERNEL_OBJ/arch/arm/boot/dts/
 TARGET_KERNEL_SOURCE := kernel/samsung/k3gxx
 TARGET_KERNEL_CONFIG := cyanogenmod_k3gxx_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 
@@ -72,7 +71,6 @@ BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
-BOARD_USES_CAMERAWRAPPER := true
 
 #Enable ValidityService for fingerprint
 BOARD_USES_VALIDITY := true
