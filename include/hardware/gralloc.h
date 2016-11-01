@@ -65,6 +65,7 @@ __BEGIN_DECLS
  */
 
 #define GRALLOC_HARDWARE_GPU0 "gpu0"
+#define TO_HW_DEVICE_T_OPEN(x) reinterpret_cast<struct hw_device_t**>(x)
 
 enum {
     /* buffer is never read in software */
