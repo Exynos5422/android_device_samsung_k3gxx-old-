@@ -69,7 +69,7 @@ TARGET_NO_RADIOIMAGE := true
 BOARD_NEEDS_MEMORYHEAPION := true
 
 #Enable ValidityService for fingerprint
-BOARD_USES_VALIDITY := true
+#BOARD_USES_VALIDITY := true
 
 # Charger/Healthd
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
