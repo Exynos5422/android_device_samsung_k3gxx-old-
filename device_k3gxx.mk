@@ -95,6 +95,10 @@ PRODUCT_PACKAGES += \
 	modemloader \
     cbd \
     
+# Telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+ 
 ###########################################################
 ### WIFI
 ###########################################################
