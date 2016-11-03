@@ -3,7 +3,7 @@ import init.universal5422.usb.rc
 import init.samsung.rc
 
 on early-init
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
+    mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
 
 on init
     export LD_SHIM_LIBS "/system/lib/omx/libOMX.Exynos.AVC.Encoder.so|/system/lib/libsamsung_symbols.so:/system/lib/libexynoscamera.so|libsamsung_symbols.so:/system/bin/gpsd|libdmitry.so"
@@ -11,10 +11,7 @@ on init
 
     symlink /sdcard /storage/sdcard0
     symlink /sdcard1 /storage/sdcard1
-    symlink /sdcard1 /mnt/extSdCard
-    symlink /sdcard1 /mnt/sdcard1
     symlink /sdcard1 /external_sd
-    symlink /storage/usbdisk /mnt/usbdisk
 
     symlink /data/app /factory
 
