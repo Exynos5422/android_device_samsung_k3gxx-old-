@@ -4,7 +4,7 @@ PRODUCT_RELEASE_NAME := k3gxx
 # Inherit some common COS stuff.
 $(call inherit-product, vendor/cos/common.mk)
 
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+#$(call inherit-product, vendor/cos/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/k3gxx/device_k3gxx.mk)

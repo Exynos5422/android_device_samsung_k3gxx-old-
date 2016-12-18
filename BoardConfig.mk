@@ -50,7 +50,7 @@ BOARD_CUSTOM_MKBOOTIMG := mkdtbhbootimg
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000 --tags_offset 0x10000100
 BOARD_MKBOOTIMG_ARGS += --dt_dir $(OUT)/obj/KERNEL_OBJ/arch/arm/boot/dts/
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos5422
-TARGET_KERNEL_CONFIG := cyanogenmod_k3gxx_defconfig
+TARGET_KERNEL_CONFIG := exynos5422-k3g_00_defconfig
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 
